@@ -4,6 +4,7 @@
   text-align: center;
   overflow: hidden;
   background: var(--bg);
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 107, 107, 0.08) 0%, transparent 60%);
   min-height: 100vh;
 }
 
@@ -125,6 +126,9 @@
   align-items: flex-end;
   position: relative;
   height: 500px;
+  /* Fade out bottom part to create "emerging from void" effect */
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 55%);
+  mask-image: linear-gradient(to top, transparent 0%, black 35%);
 }
 
 .phone {
@@ -132,10 +136,6 @@
   bottom: 0;
   left: 50%; /* Center horizontally */
   transition: transform 0.1s ease-out;
-  border-radius: 40px; /* Increased radius for modern phones */
-  overflow: hidden;
-  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.25); /* Stronger shadow */
-  background: transparent; /* Changed from black in case image has transparency */
 }
 
 .phone img {
@@ -312,4 +312,96 @@
 @keyframes zoomIn {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* Glassmorphism Floating Cards */
+.floatingCard {
+  position: absolute;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 20;
+  animation: float 6s ease-in-out infinite;
+  min-width: 180px;
+}
+
+.cardIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.cardIcon.green {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+
+.cardIcon.blue {
+  background: linear-gradient(135deg, #2196F3, #03A9F4);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.cardDesc {
+  font-size: 10px;
+  color: #666;
+}
+
+/* Positioning */
+.cardLeft {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.cardRight {
+  bottom: 25%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.cardTopRight {
+  top: 10%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 1024px) {
+  .floatingCard {
+    transform: scale(0.85); /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .floatingCard {
+    display: none; /* Hide on mobile to avoid clutter */
+  }
 }

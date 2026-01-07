@@ -19,11 +19,11 @@ const Hero = () => {
   // Animation values
   const scrollRatio = Math.min(scrollY / 600, 1);
   
-  // Start further apart (280px) and move slightly closer (240px) on scroll
-  const offset = 280 - (scrollRatio * 40); 
-  const rotate = 20 - (scrollRatio * 10);
+  // Start further apart (320px) and move slightly closer (280px) on scroll
+  const offset = 320 - (scrollRatio * 40); 
+  const rotate = 15 - (scrollRatio * 5); // Reduced rotation for cleaner look
   const translateY = 40 + (scrollRatio * 60); // Phones move down as you scroll
-  const sideY = 80 - (scrollRatio * 40); // Side phones move up/down relative to center
+  const sideY = 60 - (scrollRatio * 40); // Side phones move up/down relative to center
 
   // Video Modal State
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -55,7 +55,15 @@ const Hero = () => {
             </div>
             
             <h1>
-              Yeni Nesil <br />Personel Takip Yazılımı
+              Yeni Nesil <br />
+              <span style={{ 
+                background: 'linear-gradient(135deg, #ef3225 0%, #EE5A24 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                display: 'inline-block'
+              }}>
+                Personel Takip Yazılımı
+              </span>
             </h1>
             
             <p className={styles.subtitle}>
@@ -67,7 +75,7 @@ const Hero = () => {
               <button className="btn btn-text" onClick={() => setIsVideoOpen(true)}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
+                <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
                 </svg>
                 Tanıtım Videosu
               </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./TrustSection.module.css";
+import { useEffect, useState, useRef } from "react";
 
 const partners = [
   { name: "RAMS", logo: "https://netkurum.com/assets/images/referans_sirketler/rams.webp" },
@@ -12,10 +13,56 @@ const partners = [
 ];
 
 const stats = [
-  { value: "10+", label: "Kurumsal Şirket", desc: "Netkurum altyapısını aktif olarak kullanıyor." },
-  { value: "3000+", label: "Aktif Personel", desc: "Her gün sistem üzerinden işlemlerini gerçekleştiriyor." },
-  { value: "%100", label: "Müşteri Memnuniyeti", desc: "7/24 destek ve kesintisiz hizmet garantisi." }
+  { value: 10, suffix: "+", label: "Kurumsal Şirket", desc: "Netkurum altyapısını aktif olarak kullanıyor." },
+  { value: 3000, suffix: "+", label: "Aktif Personel", desc: "Her gün sistem üzerinden işlemlerini gerçekleştiriyor." },
+  { value: 100, prefix: "%", label: "Müşteri Memnuniyeti", desc: "7/24 destek ve kesintisiz hizmet garantisi." }
 ];
+
+const AnimatedCounter = ({ value, duration = 2000 }: { value: number, duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!hasAnimated) return;
+
+    let startTime: number | null = null;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      
+      setCount(Math.floor(value * easeOutQuart));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [hasAnimated, value, duration]);
+
+  return <span ref={elementRef}>{count}</span>;
+};
 
 const TrustSection = () => {
   const marqueeItems = [...partners, ...partners, ...partners];
@@ -45,7 +92,9 @@ const TrustSection = () => {
             {stats.map((stat, index) => (
               <div key={index} className={styles.statItem}>
                 <div className={styles.statContent}>
-                  <h3>{stat.value}</h3>
+                  <h3>
+                    {stat.prefix}<AnimatedCounter value={stat.value} />{stat.suffix}
+                  </h3>
                   <h4>{stat.label}</h4>
                   <p>{stat.desc}</p>
                 </div>
