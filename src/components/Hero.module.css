@@ -1,0 +1,315 @@
+.hero {
+  padding-top: 120px;
+  padding-bottom: 0;
+  text-align: center;
+  overflow: hidden;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Trust Badge */
+.trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 18px 6px 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+
+.avatarStack {
+  display: flex;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  margin-left: -8px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.trustBadge span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 18px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* New Store Capsule Section */
+.appBadgesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+}
+
+.appAvailableInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.badgeCapsule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #000;
+  border-radius: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.badgeCapsule img {
+  opacity: 1; /* Was 0.8, make it solid */
+  transition: opacity 0.2s;
+}
+
+.badgeCapsule img:hover {
+  opacity: 0.8;
+}
+
+.dividerSmall {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider {
+  width: 24px;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Mockups */
+.mockups {
+  position: relative;
+}
+
+.phoneGroup {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  height: 500px;
+}
+
+.phone {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Center horizontally */
+  transition: transform 0.1s ease-out;
+  border-radius: 40px; /* Increased radius for modern phones */
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+  background: transparent; /* Changed from black in case image has transparency */
+}
+
+.phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.frameOverlay {
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.phoneCenter {
+  z-index: 3;
+}
+
+.phoneRight {
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .phoneLeft,
+  .phoneRight {
+    display: none;
+  }
+
+  .phoneCenter {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 90px;
+  }
+
+  .trustBadge {
+    padding: 5px 14px 5px 5px;
+  }
+
+  .trustBadge span {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .appBadgesContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .appAvailableInfo {
+    font-size: 13px;
+  }
+
+  .phoneCenter {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .phoneCenter {
+    transform: scale(0.65);
+  }
+}
+
+/* Video Modal */
+.videoModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.videoWrapperContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.videoWrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closeButton {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

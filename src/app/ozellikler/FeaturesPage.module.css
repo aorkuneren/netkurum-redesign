@@ -1,0 +1,86 @@
+.hero {
+  padding-top: 160px;
+  text-align: center;
+  background: var(--surface-1);
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.detailsSection {
+  padding: 8rem 0;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.detail:last-child {
+  margin-bottom: 0;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse .detailContent {
+  direction: ltr;
+}
+
+.detailContent h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailContent p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.detailContent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailContent li {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.detailVisual {
+  width: 100%;
+}
+
+.visualBox {
+  height: 400px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-1) 100%);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  .detail {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .detailContent ul {
+    align-items: center;
+  }
+}
