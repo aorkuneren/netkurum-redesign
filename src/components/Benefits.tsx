@@ -13,7 +13,7 @@ const Benefits = () => {
         </div>
 
         <div className="section-header">
-          <h2>Netkurum'un Avantajları</h2>
+          <h2>Netkurum’un Avantajları</h2>
           <p>İşletmenizin ihtiyaçlarına göre tasarlanmış kapsamlı modüller.</p>
         </div>
 
@@ -36,7 +36,7 @@ const Benefits = () => {
           <div className={styles.card}>
             <div className={styles.cardIcon}>📊</div>
             <h3>Anlık Raporlama</h3>
-            <p>Puantaj cetvelleri, performans analizleri ve devamsızlık raporlarını Excel'e aktarın.</p>
+            <p>Puantaj cetvelleri, performans analizleri ve devamsızlık raporlarını Excel’e aktarın.</p>
           </div>
         </div>
       </div>

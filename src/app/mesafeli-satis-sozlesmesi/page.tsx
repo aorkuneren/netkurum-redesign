@@ -13,7 +13,7 @@ export default function SalesAgreement() {
       <p>Hizmet bedeli, sipariş anında belirtilen fiyatlar üzerinden tahsil edilir. Fiyatlara KDV dahildir.</p>
 
       <h2>4. Cayma Hakkı</h2>
-      <p>Yazılım ve dijital içerik hizmetleri, Mesafeli Sözleşmeler Yönetmeliği uyarınca "elektronik ortamda anında ifa edilen hizmetler" kapsamında olduğundan cayma hakkı istisnasına tabidir.</p>
+      <p>Yazılım ve dijital içerik hizmetleri, Mesafeli Sözleşmeler Yönetmeliği uyarınca “elektronik ortamda anında ifa edilen hizmetler” kapsamında olduğundan cayma hakkı istisnasına tabidir.</p>
     </SimplePage>
   );
 }

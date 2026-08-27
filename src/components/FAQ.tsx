@@ -34,7 +34,7 @@ const FAQ = () => {
       <div className="container">
         <div className={styles.header}>
           <div className="badge">
-            <span>❓</span> FAQ's
+            <span>❓</span> FAQs
           </div>
           <h2>Sıkça Sorulan Sorular</h2>
           <p>Netkurum hakkında merak edilenlerin yanıtları.</p>

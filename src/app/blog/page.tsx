@@ -2,7 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import styles from "./Blog.module.css";
 
-const BlogCard = ({ title, excerpt, date }: any) => (
+type BlogCardProps = {
+  title: string;
+  excerpt: string;
+  date: string;
+};
+
+const BlogCard = ({ title, excerpt, date }: BlogCardProps) => (
   <div className={`${styles.card} glass`}>
     <div className={styles.imagePlaceholder}></div>
     <div className={styles.cardContent}>

@@ -50,7 +50,7 @@ const FeatureShowcase = () => {
           <h2>İşletmeniz İçin Uçtan Uca Çözümler</h2>
           <p>
             İK süreçlerinizi dijitalleştirerek zaman ve maliyet tasarrufu sağlayın. 
-            İşte Netkurum'un sunduğu bazı temel yetenekler.
+            İşte Netkurum’un sunduğu bazı temel yetenekler.
           </p>
         </div>
 

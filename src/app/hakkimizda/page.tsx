@@ -18,7 +18,7 @@ export default function About() {
           <div className={styles.content}>
             <div className={styles.vision}>
               <h2>Vizyonumuz</h2>
-              <p>Türkiye'nin ve dünyanın en kolay kullanılabilir, en güvenilir bulut tabanlı İK platformu olmak.</p>
+              <p>Türkiye’nin ve dünyanın en kolay kullanılabilir, en güvenilir bulut tabanlı İK platformu olmak.</p>
             </div>
             
             <div className={styles.mission}>

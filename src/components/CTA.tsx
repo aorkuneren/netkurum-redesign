@@ -11,7 +11,7 @@ const CTA = () => {
             ve Bugün Dijitalleşmeye Başlayın
           </h2>
           <p className={styles.subtitle}>
-            Netkurum'u şimdi indirin ve personel yönetim süreçlerinizi <br className={styles.desktopBr} />
+            Netkurum’u şimdi indirin ve personel yönetim süreçlerinizi <br className={styles.desktopBr} />
             cebinizden yönetmenin kolaylığını deneyimleyin!
           </p>
 

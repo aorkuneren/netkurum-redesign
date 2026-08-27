@@ -39,7 +39,7 @@ const Testimonials = () => {
           </div>
           <h2>Müşterilerimizin Deneyimleri</h2>
           <p>
-            Netkurum'un işletmelere nasıl değer kattığını ve dijital dönüşüm <br />
+            Netkurum’un işletmelere nasıl değer kattığını ve dijital dönüşüm <br />
             süreçlerini nasıl kolaylaştırdığını kullanıcılarımızdan dinleyin.
           </p>
         </div>

@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <SimplePage title="Gizlilik Politikası">
       <h2>1. Veri Sorumlusu</h2>
-      <p>Netkurum ("Platform"), Karatsoft Teknoloji tarafından işletilmektedir. Kişisel verilerinizin güvenliği bizim için önceliklidir.</p>
+      <p>Netkurum (“Platform”), Karatsoft Teknoloji tarafından işletilmektedir. Kişisel verilerinizin güvenliği bizim için önceliklidir.</p>
       
       <h2>2. Toplanan Veriler</h2>
       <p>Hizmetlerimizi sunabilmek adına aşağıdaki verileri toplamaktayız:</p>

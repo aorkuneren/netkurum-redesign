@@ -3,13 +3,20 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import styles from "./FeaturesPage.module.css";
 
-const FeatureDetail = ({ title, description, benefits, reverse = false }: any) => (
+type FeatureDetailProps = {
+  title: string;
+  description: string;
+  benefits: string[];
+  reverse?: boolean;
+};
+
+const FeatureDetail = ({ title, description, benefits, reverse = false }: FeatureDetailProps) => (
   <div className={`${styles.detail} ${reverse ? styles.reverse : ""}`}>
     <div className={styles.detailContent}>
       <h3>{title}</h3>
       <p>{description}</p>
       <ul>
-        {benefits.map((b: string, i: number) => <li key={i}>✅ {b}</li>)}
+        {benefits.map((b, i) => <li key={i}>✅ {b}</li>)}
       </ul>
     </div>
     <div className={styles.detailVisual}>

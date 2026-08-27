@@ -1,0 +1,31 @@
+name: Hata bildirimi
+description: Beklenmeyen bir davranış bildirin
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ne oldu?
+      description: Beklenen davranış neydi, bunun yerine ne oldu?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Yeniden üretme adımları
+      placeholder: |
+        1. ... sayfasına git
+        2. ... butonuna tıkla
+        3. Hata görünüyor
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ortam
+      placeholder: "Tarayıcı / işletim sistemi / sürüm"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log veya ekran görüntüsü
+      render: shell

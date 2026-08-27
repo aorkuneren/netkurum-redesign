@@ -16,7 +16,7 @@ const Partners = () => {
   return (
     <section className={styles.partners}>
       <div className="container">
-        <p className={styles.title}>500+'den fazla şirket Netkurum'a güveniyor</p>
+        <p className={styles.title}>500+’den fazla şirket Netkurum’a güveniyor</p>
         
         <div className={styles.marqueeContainer}>
           <div className={styles.marqueeTrack}>

@@ -46,7 +46,7 @@ const Capabilities = () => {
           {/* Right Side: Content */}
           <div className={styles.contentSide}>
             <h2 className={styles.heading}>
-              Netkurum'un Gelişmiş <br />
+              Netkurum’un Gelişmiş <br />
               İK ve PDKS Yetenekleri
             </h2>
 
