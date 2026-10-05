@@ -44,23 +44,22 @@ const Footer = () => {
             <div className={styles.linksCol}>
               <h4>Ürün</h4>
               <Link href="/ozellikler">Özellikler</Link>
-              <Link href="/fiyatlandirma">Fiyatlandırma</Link>
-              <Link href="/destek">Destek Merkezi</Link>
+              <Link href="/destek-ve-indirmeler">Destek ve İndirmeler</Link>
               <Link href="/sss">Sık Sorulan Sorular</Link>
+              <Link href="/iletisim">Demo Talebi</Link>
             </div>
             <div className={styles.linksCol}>
               <h4>Şirket</h4>
               <Link href="/hakkimizda">Hakkımızda</Link>
               <Link href="/blog">Blog</Link>
-              <Link href="/kariyer">Kariyer</Link>
               <Link href="/iletisim">İletişim</Link>
             </div>
             <div className={styles.linksCol}>
               <h4>Yasal</h4>
               <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link>
-              <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>
-              <Link href="/kvkk">KVKK</Link>
-              <Link href="/cerez-politikasi">Çerez Politikası</Link>
+              <Link href="/sartlar-ve-kosullar">Şartlar ve Koşullar</Link>
+              <Link href="/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</Link>
+              <Link href="/teslimat-ve-iade">Teslimat ve İade</Link>
             </div>
             <div className={styles.linksCol}>
               <h4>İletişim</h4>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./FeatureShowcase.module.css";
 
 const features = [
@@ -74,7 +75,7 @@ const FeatureShowcase = () => {
         </div>
 
         <div className={styles.actions}>
-          <button className="btn btn-outline">Tüm Özellikleri Gör</button>
+          <Link href="/ozellikler" className="btn btn-outline">Tüm Özellikleri Gör</Link>
         </div>
       </div>
     </section>

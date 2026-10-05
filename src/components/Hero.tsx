@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 
@@ -71,7 +72,7 @@ const Hero = () => {
             </p>
 
             <div className={styles.actions}>
-              <button className="btn btn-primary">Hemen Başlayın</button>
+              <Link href="/iletisim" className="btn btn-primary">Hemen Başlayın</Link>
               <button className="btn btn-text" onClick={() => setIsVideoOpen(true)}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="2"/>
@@ -83,6 +84,29 @@ const Hero = () => {
           </div>
 
           <div className={styles.mockups}>
+            {/* Floating Glassmorphism Cards */}
+            <div className={`${styles.floatingCard} ${styles.cardLeft}`}>
+              <div className={styles.cardIcon}>⚡</div>
+              <div className={styles.cardContent}>
+                <span className={styles.cardTitle}>Giriş Başarılı</span>
+                <span className={styles.cardDesc}>08:58 • QR Kod Doğrulandı</span>
+              </div>
+            </div>
+            <div className={`${styles.floatingCard} ${styles.cardRight}`}>
+              <div className={`${styles.cardIcon} ${styles.green}`}>✓</div>
+              <div className={styles.cardContent}>
+                <span className={styles.cardTitle}>İzin Onaylandı</span>
+                <span className={styles.cardDesc}>Yıllık İzin • İK Sistemi</span>
+              </div>
+            </div>
+            <div className={`${styles.floatingCard} ${styles.cardTopRight}`}>
+              <div className={`${styles.cardIcon} ${styles.blue}`}>📍</div>
+              <div className={styles.cardContent}>
+                <span className={styles.cardTitle}>Konum Eşleşti</span>
+                <span className={styles.cardDesc}>Merkez Ofis • GPS Aktif</span>
+              </div>
+            </div>
+
             <div className={styles.phoneGroup}>
               <div 
                 className={`${styles.phone} ${styles.phoneLeft}`}

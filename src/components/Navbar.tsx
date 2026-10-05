@@ -42,12 +42,12 @@ const Navbar = () => {
             <Link href="/ozellikler">Özellikler</Link>
             <Link href="/hakkimizda">Hakkımızda</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/destek">Destek</Link>
+            <Link href="/destek-ve-indirmeler">Destek</Link>
             <Link href="/iletisim">İletişim</Link>
           </nav>
 
           <div className={styles.actions}>
-            <Link href="/demo" className="btn btn-primary">Hemen Başlayın</Link>
+            <Link href="/iletisim" className="btn btn-primary">Hemen Başlayın</Link>
           </div>
 
           <button 
@@ -76,9 +76,9 @@ const Navbar = () => {
           <Link href="/ozellikler" onClick={() => setMenuOpen(false)}>Özellikler</Link>
           <Link href="/hakkimizda" onClick={() => setMenuOpen(false)}>Hakkımızda</Link>
           <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-          <Link href="/destek" onClick={() => setMenuOpen(false)}>Destek</Link>
+          <Link href="/destek-ve-indirmeler" onClick={() => setMenuOpen(false)}>Destek</Link>
           <Link href="/iletisim" onClick={() => setMenuOpen(false)}>İletişim</Link>
-          <Link href="/demo" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
+          <Link href="/iletisim" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
             Hemen Başlayın
           </Link>
         </nav>
